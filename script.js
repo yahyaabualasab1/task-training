@@ -35,7 +35,7 @@ function showMessage(message) {
     setRefreshBtnState('');
 }
 
-// دالة عرض معلومات الريبو في الواجهة
+// فنكشن عرض معلومات الريبو في الواجهة
 function showRepo(repo) {
     repoContainer.className = 'repo';
     repoContainer.innerHTML = `
@@ -50,7 +50,7 @@ function showRepo(repo) {
     setRefreshBtnState('');
 }
 
-// دالة لتغيير حالة زر التحديث (loading, error, عادي)
+// فنكشن  لتغيير حالة زر التحديث 
 function setRefreshBtnState(state) {
     refreshBtn.classList.remove('loading', 'error');
     if (state === 'loading') {
@@ -64,7 +64,7 @@ function setRefreshBtnState(state) {
     }
 }
 
-// دالة لجلب ريبوزيتوري عشوائي من GitHub حسب اللغة
+// فنكشن لجلب ريبوزيتوري عشوائي من 
 async function fetchRandomRepo(language) {
     showLoading();
     setRefreshBtnState('loading');
@@ -111,7 +111,7 @@ async function fetchRandomRepo(language) {
     }
 }
 
-// حدث عند تغيير اختيار اللغة
+//  عند تغيير اختيار اللغة
 languageSelect.addEventListener('change', function () {
     const language = this.value;
     if (language) {
@@ -121,7 +121,7 @@ languageSelect.addEventListener('change', function () {
     }
 });
 
-// حدث عند الضغط على زر التحديث
+//  عند الضغط على زر التحديث
 refreshBtn.addEventListener('click', function () {
     const language = languageSelect.value;
     if (language) {
