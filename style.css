@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+select, button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    background: #e9ecef;
+    color: #333;
+    min-height: 100px; 
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.message.loading {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.repo {
+    margin-top: 20px;
+    text-align: left;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    min-height: 100px;
+}
+
+.repo h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.repo h3 a {
+    color: #0366d6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.repo h3 a:hover {
+    color: #00ff2f; 
+    text-decoration: underline;
+}
+
+.repo p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Skeleton Animation */
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+.skeleton {
+    background: #f0f0f0;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+.skeleton-line {
+    height: 14px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.2s infinite;
+}
+
+.skeleton-title {
+    width: 60%;
+    height: 18px;
+}
+
+.skeleton-text {
+    width: 100%;
+}
+
+.skeleton-short {
+    width: 40%;
+}
+
+/* زر التحديث */
+#refreshBtn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0366d6;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#refreshBtn:hover:not(:disabled) {
+    background-color: #024c9a;
+}
+
+#refreshBtn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+#refreshBtn.loading {
+    background-color: #f0ad4e; 
+    cursor: wait;
+}
+
+#refreshBtn.error {
+    background-color: #d9534f;
+}
