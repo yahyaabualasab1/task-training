@@ -2,10 +2,9 @@ const languageSelect = document.getElementById('languageSelect');
 const repoContainer = document.getElementById('repoContainer');
 const refreshBtn = document.getElementById('refreshBtn');
 
-// لو عندك توكن من GitHub، حطّه هنا (لو مش موجود اتركه فارغ)
-const GITHUB_TOKEN = ''; // مثال: 'ghp_XXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+const GITHUB_TOKEN = ''; 
 
-// دالة لتغيير حالة الرسالة إلى Loading مع skeleton
+// فنكشن لتغيير حالة الرسالة إلى 
 function showLoading() {
     repoContainer.className = 'skeleton';
     repoContainer.innerHTML = `
@@ -15,10 +14,10 @@ function showLoading() {
         <div class="skeleton-line skeleton-short"></div>
     `;
     refreshBtn.style.display = 'none';
-    setRefreshBtnState(''); // إعادة زر التحديث لحالته العادية
+    setRefreshBtnState(''); 
 }
 
-// دالة لعرض رسالة خطأ
+// فنكشن لعرض رسالة خطأ
 function showError(message) {
     repoContainer.className = 'message error';
     repoContainer.textContent = message;
@@ -27,7 +26,7 @@ function showError(message) {
     setRefreshBtnState('error');
 }
 
-// دالة لعرض رسالة عادية (مثلاً عند طلب اختيار لغة)
+// فنكشن لعرض رسالة عادية)
 function showMessage(message) {
     repoContainer.className = 'message';
     repoContainer.textContent = message;
